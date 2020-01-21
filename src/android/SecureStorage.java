@@ -23,7 +23,7 @@ public class SecureStorage extends CordovaPlugin {
     private static final String TAG = "SecureStorageFra";
 
     private static final boolean SUPPORTED = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
-    private static final boolean MATCHES_ANDROID_API_28 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P;
+    private static final boolean MATCHES_ANDROID_API_28 = Build.VERSION.SDK_INT > Build.VERSION_CODES.O;
     private static final String ACTION_UNLOCK = "com.android.credentials.UNLOCK";
     private static final Integer DEFAULT_AUTHENTICATION_VALIDITY_TIME = 60 * 60 * 24; // Fallback to 24h. Workaround to avoid asking for credentials too "often"
 
